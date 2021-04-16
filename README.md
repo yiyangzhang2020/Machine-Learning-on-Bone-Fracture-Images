@@ -11,6 +11,10 @@ Our main tasks include:
 2.Select appropriate traning model and classification method.
 3.Ensure a high accuracy of the traning model.
 
+The functions in our library will include:
+1. load_images
+2. train_images
+
 Each group member's task is yet to be discussed.
 
 
