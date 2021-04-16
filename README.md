@@ -21,7 +21,10 @@ Our altimate goal is to build a medical image-processing library. The library sh
 Each group member's task is yet to be discussed.
 
 Author
+
 Candice Li (shuyi.li@duke.edu)
+
 Yiyang Zhang (yiyang.zhang381@duke.edu)
+
 Ashley Hu (mengyi.hu@duke.edu)
 
