@@ -1,14 +1,11 @@
-
-
+#import required packages
 import numpy as np
 import matplotlib.pyplot as plt
 import torch
 import torch.nn.functional as F
 from tqdm.notebook import tqdm
 from torchvision import datasets, transforms
-
 from __future__ import print_function
-
 import os
 import time
 import datetime
@@ -16,20 +13,13 @@ import random
 import json
 import argparse
 import numpy as np
-
 import tensorflow
-
-
 import tensorflow.keras.backend as K 
-
-
 from tensorflow.keras.applications import densenet
 from tensorflow.keras.optimizers import Adam
-
 import numpy as np
 import pandas as pd
 import random
-
 import tensorflow
 import cv2
 
