@@ -310,7 +310,7 @@ plt.legend()
 
 
 plt.figure()
-plt.savefig('/Training & Validation Accuracy.png')
+plt.savefig('/Training_Validation_Accuracy.png')
 
 # Train and val loss
 plt.plot(epochs, loss, 'b', label='Training Loss')
@@ -320,4 +320,4 @@ plt.legend()
 
 
 plt.show()
-plt.savefig('/Training & Validation Loss.png')
+plt.savefig('/Training_Validation_Loss.png')
