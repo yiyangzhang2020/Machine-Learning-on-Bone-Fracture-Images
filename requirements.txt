@@ -1,0 +1,14 @@
+'''Libraries requried to install'''
+pip==19.3.1
+numpy==1.19.5
+pandas==1.1.5
+matplotlib==3.2.2
+torch==1.8.1 
+tqdm==4.6.0 
+future==0.18.2 
+tensorflow==2.4.1
+json==2.0.9
+argparse==1.1
+tensorflow.keras==2.4.0
+cv2==4.1.2
+seaborn==0.11.1
