@@ -28,8 +28,9 @@ Yiyang Zhang (yiyang.zhang381@duke.edu)
 
 Ashley Hu (mengyi.hu@duke.edu)
 
-#outcomes
+# Outcomes
 Since it takes really long to train and test the data, the results are displayed here:
 ![](Training_Validation_Accuracy.png)
+![](Training_Validation_Loss.png)
 
 
