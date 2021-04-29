@@ -17,6 +17,7 @@ The functions in our library will include:
 1. load_images
 2. train_images
 
+Use mura_elbow to start the training model.
 
 Author
 
