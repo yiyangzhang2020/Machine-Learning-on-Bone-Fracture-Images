@@ -17,8 +17,6 @@ The functions in our library will include:
 1. load_images
 2. train_images
 
-Our altimate goal is to build a medical image-processing library. The library should 
-Each group member's task is yet to be discussed.
 
 Author
 
