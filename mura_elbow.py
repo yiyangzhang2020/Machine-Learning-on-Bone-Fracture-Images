@@ -71,18 +71,20 @@ def load_path(root_p = training_path):
 X_path, X_label = load_path()
 
 
-
+#rotation flip to ensure a fixed image size
 def random_rotation_flip(image,size = 224):
 	if random.randint(0,1):
 		image = cv2.flip(image,1) 
-
+        # 1 leads to a horizontal flip
+	# 0 leads to a vertical flip
+	# -1 leads to both horizontal and vertical 
 	if random.randint(0,1):
 		angle = random.randint(-30,30)
 		M = cv2.getRotationMatrix2D((size/2,size/2),angle,1)
-	
 		image = cv2.warpAffine(image,M,(size,size))
 	return image
 
+#loading images from file path
 def load_image(Path = X_path, size = 224):
 	Images = []
 	for path in Path:
@@ -94,17 +96,14 @@ def load_image(Path = X_path, size = 224):
 
 		except Exception as e:
 			print(str(e))
-
+        #convert and set data to numpy data types
 	Images = np.asarray(Images).astype('float32')
-
 	mean = np.mean(Images)	
 	std = np.std(Images)
 	Images = (Images - mean) / std
-	
 	return Images
 
 X_train = load_image()
-
 print(X_train.shape)
 
 # Commented out IPython magic to ensure Python compatibility.
@@ -150,14 +149,15 @@ def convertToOneHot(vector, num_classes=None):
 
 import seaborn as sns
 
+#convert list X and y_raw to numpy data type(array)
 X = np.array(X_train)
 y_raw = np.array(X_label)
 
+#one hot encode training set
 y = convertToOneHot(y_raw)
 
 # display the distribution of postive and negative
 sns.countplot(y_raw)
-
 
 #print out info for the training set
 print("Shape of train images is: ", X.shape)
@@ -165,7 +165,8 @@ print("Shape of labels is: ", y.shape)
 print(X[0][0].shape)
 
 #Test train split
-X_train, X_val, y_train, y_val = train_test_split(X, y, test_size = 0.25, random_state=3)
+#pareto principle 80/20
+X_train, X_val, y_train, y_val = train_test_split(X, y, test_size = 0.2, random_state=3) #can also use 0.25 as test size
 
 #Test the split of 0's and 1's in training and validation labels
 pos_train =0
@@ -190,12 +191,10 @@ print("In training:")
 print("Positive: " + str(pos_train))
 print("Negative: " + str(neg_train))
 print("Pos/neg ratio: " + str (pos_train/neg_train))
-
 print("In testing:")
 print("Positive: " + str(pos_val))
 print("Negative: " + str(neg_val))
 print("Pos/neg ratio: " + str (pos_val/neg_val))
-
 print("Shape of Training images is: ", X_train.shape)
 print("Shape of Validation images is: ", X_val.shape)
 print("Shape of Training labels is: ", y_train.shape)
