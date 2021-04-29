@@ -234,12 +234,17 @@ for layer in feature_model.layers[-60:]:
 
 feature_model.compile(loss='binary_crossentropy', optimizer=opt, metrics=['acc'])
 
+#image data generator for implementing imgae agumentaion to ensure better accuracy on images
 train_datagen = ImageDataGenerator(rescale=1./255,
+				   #rotate
                                   rotation_range = 30,
+				   #define the percentage(rate) of random shifting in width horizontally and vertically
                                   width_shift_range=0.3,
                                   height_shift_range=0.3,
+				   #define the percentage(rate) of cutting of image in different angles and zoom range
                                   shear_range=0.3,
                                   zoom_range=0.3,
+				   #flip
                                   horizontal_flip=True,
                                   vertical_flip=True,
                                   data_format='channels_last')
