@@ -17,7 +17,8 @@ The functions in our library will include:
 1. load_images
 2. train_images
 
-Use mura_elbow to start the training model.
+Go to mura_elbow.py to use the training model.
+See code comments for further explaination and instruction.
 
 Author
 
